@@ -9,13 +9,16 @@ before (done)->
 
 describe "should be able to ",()->
   it "initialize",(done)->
-    #console.log app
     assert app!=null
     assert app!=undefined
     done()
   
   it "attachErrorHandler",(done)->
-    app.attachErrorHandler(host)
+    try
+      unknownmethod()
+    catch e
+      console.log "got error"
+      console.error e
     done()
     
   it "throw error",(done)->

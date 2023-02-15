@@ -9,10 +9,15 @@
     "dependencies": {
         "errorhandler": "~1.5.1",
         "gqcoffee": "~1.0.25",
-        "coffeescript": "~2.7.0"
+        "coffeescript": "~2.7.0",
+        "mocha":"~9.2.2"
     },
     "scripts": {
         "inst": "npm install --no-bin-links && npm audit fix --force --no-bin-links",
         "test": "mocha --require node_modules/coffeescript/register test/*.coffee -t 20000"
+    },
+    "version":"0.0.1",
+    "versions":{
+        "0.0.1":"init"
     }
 }
