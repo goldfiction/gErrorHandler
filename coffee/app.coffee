@@ -1,21 +1,19 @@
 { logError, isOperationalError } = require 'errorhandler'
-@log=console.log
-@error=console.error
 
 @attachErrorHandler=(host)->
   process.on 'unhandledRejection',(reason,p)->
-    @error reason, 'Unhandled Rejection at Promise', p
+    console.error reason, 'Unhandled Rejection at Promise', p
   .on 'uncaughtException',(err)->
-    @error err, 'Uncaught Exception thrown'
+    console.error err, 'Uncaught Exception thrown'
     if !isOperationalError(err)
       process.exit 1
   .on 'error',(err)->
-    @error err, 'Error'
+    console.error err, 'Error'
 
 @warpErrorHandler=(o,func,cb)->
   try
     func o,cb
   catch e
     #console.log " we caught an error!!! "
-    @error e
+    console.error e
     cb e,o

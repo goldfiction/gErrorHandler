@@ -1,6 +1,6 @@
 {
     "name": "gErrorHandler",
-    "main": "main.js",
+    "main": "app.js",
     "license": "Apache-2.0",
     "engines": {
         "npm": "5.7.1",

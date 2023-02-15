@@ -14,6 +14,7 @@ describe "should be able to ",()->
     done()
   
   it "attachErrorHandler",(done)->
+    app.attachErrorHandler.apply(this,null)
     try
       unknownmethod()
     catch e
