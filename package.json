@@ -1,0 +1,18 @@
+{
+    "name": "gErrorHandler",
+    "main": "main.js",
+    "license": "Apache-2.0",
+    "engines": {
+        "npm": "5.7.1",
+        "node": "8.17.0"
+    },
+    "dependencies": {
+        "errorhandler": "~1.5.1",
+        "gqcoffee": "~1.0.25",
+        "coffeescript": "~2.7.0"
+    },
+    "scripts": {
+        "inst": "npm install --no-bin-links && npm audit fix --force --no-bin-links",
+        "test": "mocha --require node_modules/coffeescript/register test/*.coffee -t 20000"
+    }
+}
