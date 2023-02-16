@@ -17,7 +17,7 @@
     });
   };
 
-  this.warpErrorHandler = function(o, func, cb) {
+  this.wrapErrorHandler = function(o, func, cb) {
     var e;
     try {
       return func(o, cb);

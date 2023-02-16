@@ -32,9 +32,9 @@ describe "should be able to ",()->
       done()
     myEmitter.emit 'event'
     
-  it "warp error function",(done)->
+  it "wrap error function",(done)->
     o={abc:123}
-    app.warpErrorHandler o,(o,cb)->
+    app.wrapErrorHandler o,(o,cb)->
       assert o.abc==123
       #throw new Error("ddd")
       cb()
